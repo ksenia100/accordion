@@ -1,0 +1,66 @@
+/* Accordion container */
+.wrapper {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  /* Individual item */
+  .item {
+    border-top: 1px solid #ddd;
+  }
+  
+  /* Title section of each accordion item */
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+  }
+  
+  .title:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Title text */
+  .title h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  /* Icon for expanding/collapsing */
+  .title span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #666;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Content section */
+  .content {
+    padding: 16px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #555;
+    border-top: 1px solid #ddd;
+    display: none;
+  }
+  
+  /* Show the content if the item is selected */
+  .item .content {
+    display: block;
+  }
+  
+  /* Rotate the icon when content is open */
+  .item.open .title span {
+    transform: rotate(45deg);
+  }
+  
